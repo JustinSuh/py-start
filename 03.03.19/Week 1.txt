@@ -1,30 +1,99 @@
+"""
 1) Write a function that returns the maximum of two numbers.
+"""
+def return_max():
+  x=float(input("Enter a number: "))
+  y=float(input("Enter a second number: "))
+  z=max(x,y)
+  print("The larger number is "+str(z))
 
+"""
 2) Write a function called fizz_buzz that takes a number.
 If the number is divisible by 3, it should return “Fizz”.
 If it is divisible by 5, it should return “Buzz”.
 If it is divisible by both 3 and 5, it should return “FizzBuzz”.
 Otherwise, it should return the same number.
+"""
 
+def fizz_buzz():
+  x=float(input("Enter a number: "))
+  if x%5==0 and x%3==0:
+    print("FizzBuzz")
+  elif x%3==0:
+    print("Fizz")
+  elif x%5==0:
+    print("Buzz")
+  else:
+    print(x)
+
+"""
 3) Write a function for checking the speed of drivers. This function should have one parameter: speed.
 If speed is less than 70, it should print “Ok”.
 Otherwise, for every 5km above the speed limit (70), it should give the driver one demerit point and print the total number of demerit points. For example, if the speed is 80, it should print: “Points: 2”.
 If the driver gets more than 12 points, the function should print: “License suspended”
+"""
 
+def speed_check(speed):
+	points = int((float(speed)-80)//5)
+	if points <= 0:
+		print("OK")
+	elif points <=12:
+		print("Points: "+str(points))
+	else:
+		print("License Suspended")
+
+"""
 4) Write a function called showNumbers that takes a parameter called limit. It should print all the numbers between 0 and limit with a label to identify the even and odd numbers. For example, if the limit is 3, it should print:
 0 EVEN
 1 ODD
 2 EVEN
 3 ODD
+"""
 
+def showNumbers(limit):
+	for i in range(0,limit+1):
+		if i%2==0:
+			print(str(i)+" EVEN")
+		else:
+			print(str(i)+" ODD")
+
+"""
 5) Write a function that returns the sum of multiples of 3 and 5 between 0 and limit (parameter). For example, if limit is 20, it should return the sum of 3, 5, 6, 9, 10, 12, 15, 18, 20.
+"""
 
+def mult_3_5():
+	x = int(input("Please enter a whole number: "))
+	y = 0
+	
+	for i in range(0,x+1):
+		if i%3==0 or i%5==0:
+			y += i
 
+"""
 6) Write a function called show_stars(rows). If rows is 5, it should print the following:
 *
 **
 ***
 ****
 *****
+"""
 
+def show_stars(rows):
+	for i in range(1,rows+1):
+		print("*"*i)
+
+"""
 7) Write a function that prints all the prime numbers between 0 and limit where limit is a parameter.
+"""
+
+def prime_list():
+	x=int(input("Input whole number: "))
+	y=int(input("Input a larger whole number: "))
+
+	for i in range(x,y+1):
+		isPrime = True
+		for num in range(2, i):
+			if i % num == 0:
+				isPrime = False  
+		if isPrime:
+			print(i)
