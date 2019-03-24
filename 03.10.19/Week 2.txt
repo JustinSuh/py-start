@@ -8,6 +8,4 @@ Ask the user for a string and print out whether this string is a palindrome or n
 Say you are given a list saved in a variable: a = [1, 4, 9, 16, 25, 36, 49, 64, 81, 100]. Write a function that takes this list a and makes a new list that has only the even elements of this list in it.
 
 4)
-Write a Python program to read first n lines of a file.
-Write a Python program to read last n lines of a file.
-Write a Python program to read every other word of a file into a list.
+Write a Python program to read the contents of a file.
